@@ -1,0 +1,619 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* 상단 유틸리티 메뉴 */
+.top-bar {
+    background-color: #f8f9fa;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.top-bar a {
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+
+.top-bar a:hover {
+    color: #333;
+}
+
+/* 메인 헤더 */
+.header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-section {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+}
+
+.logo {
+    height: 100%;
+    width: 15%;
+    padding: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    position:absolute;
+
+}
+
+.logo img {
+    height: 160px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.lab-title {
+    font-size: 56px;
+    font-weight: 1000;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    position:absolute;
+    left: 20%;
+ 
+}
+
+/* 메인 네비게이션 */
+.main-nav {
+    background-color: #031c2f;
+    opacity: 0.5;
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item>a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-item:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.site-title {
+    background-color: #f8f9fa;
+    padding: 15px 30px;
+    border: 2px solid #333;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+/* 네비게이션 영역 */
+.navigation {
+    background-color: #343a40;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: underline;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    background-color: #495057;
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.photo-section {
+    background-color: white;
+    border: 3px solid #333;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #666;
+}
+
+/* 푸터 영역 */
+.footer {
+    background-color: #001b2f;
+    max-height: 120px;
+    color: white;
+    padding: 30px 0;
+    padding-top: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.footer-container {
+    /* max-height: 80px; */
+    margin: 0 auto;
+}
+
+.footer-info {
+    margin-bottom: 15px;
+}
+
+.footer-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffc107;
+}
+
+.footer-bottom {
+    border-top: 1px solid #495057;
+    padding-top: 20px;
+    text-align: center;
+    color: #adb5bd;
+}
+
+.foot_text {
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.school-logo {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    position : absolute;
+    top : 0px;
+    right : 50px;
+}
+
+.school-logo img {
+    height: 100%;
+    width: 100px;
+    object-fit: contain;
+}
+
+/* 반응형 디자인 */
+/* @media (max-width: 768px) {
+    .header-container {
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .logo img, .school-logo img {
+        max-height: 40px;
+        max-width: 80px;
+    }
+
+    .site-title {
+        padding: 10px 15px;
+        font-size: 16px;
+        min-width: 200px;
+    }
+
+    .nav-container {
+        gap: 20px;
+        padding: 0 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .photo-section {
+        min-height: 300px;
+    }
+
+    .photo-section img {
+        min-height: 300px;
+    }
+} */
+
+
+/* 메인 이미지 섹션 */
+.hero-section {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.3));
+    padding: 40px 0 20px;
+} 
+
+.slider{
+    width: 100%;
+    height: 500px;
+    position:relative;
+    margin : 0 auto;
+    animation: slide 10s infinite; /* 10초마다 반복 */
+}
+
+.slider input[type=radio]{
+    display: none;
+}
+
+ul.imgs{
+    padding : 0;
+    margin : 0;
+}
+
+ul.imgs li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    list-style: none;
+    padding:0;
+    margin:0;
+    transition-delay: 0.9s;
+}
+
+.bullets{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px; 
+    z-index: 2;
+}
+
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+.slider input[type=radio]:nth-child(1):checked ~ .bullets > label:nth-child(1) { 
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(2):checked ~ .bullets > label:nth-child(2) {
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(3):checked ~ .bullets > label:nth-child(3) {
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(4):checked ~ .bullets > label:nth-child(4) {
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(5):checked ~ .bullets > label:nth-child(5) {
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(1):checked ~ ul.imgs > li:nth-child(1) {
+    opacity: 1;
+    transition: 1s;
+    Z-index: 1
+}
+.slider input[type=radio]:nth-child(2):checked ~ ul.imgs > li:nth-child(2) {
+    opacity: 1;
+    transition: 1s;
+    z-index: 1;
+}
+.slider input[type=radio]:nth-child(3):checked ~ ul.imgs > li:nth-child(3) {
+    opacity: 1;
+    transition: 1s;
+    z-index: 1;
+}
+.slider input[type=radio]:nth-child(4):checked ~ ul.imgs > li:nth-child(4){
+    opacity: 1;
+    transition: 1s;
+    z-index: 1;
+}
+.slider input[type=radio]:nth-child(5):checked ~ ul.imgs > li:nth-child(5){
+    opacity: 1;
+    transition: 1s;
+    z-index: 1;
+}
+/* 컨텐츠 섹션 */
+.content-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.lab-title-main {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* About Us 섹션 */
+.about-section {
+    background-color: #ffffff;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.research-areas h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.research-description {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.research-list {
+    list-style: none;
+    padding: 0;
+}
+
+.research-list li {
+    color: #666;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.research-list li::before {
+    content: '·';
+    color: #d32f2f;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* 연구실 정보 박스 */
+.lab-info {
+    max-width: 350px;
+    background-color: #d32f2f;
+    color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.lab-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.lab-info .info-item {
+    margin-bottom: 25px;
+}
+
+.lab-info .label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.lab-info .value {
+    color: #ffebee;
+    line-height: 1.6;
+}
+
+/* 반응형 디자인 */
+/* @media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .nav-container {
+        gap: 40px;
+    }
+
+    .lab-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-container {
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    .header-container {
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    .logo-section {
+        gap: 10px;
+    }
+
+    .lab-title {
+        font-size: 16px;
+    }
+
+    .nav-container {
+        gap: 20px;
+        padding: 0 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .hero-section {
+        height: 250px;
+    }
+
+    .content-section {
+        padding: 40px 15px;
+    }
+
+    .lab-title-main {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .lab-info {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .school-logo img {
+        height: 35px;
+    }
+
+    .lab-title {
+        font-size: 14px;
+    }
+
+    .nav-container {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .nav-item {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    .top-bar {
+        display: none;
+    }
+} */
