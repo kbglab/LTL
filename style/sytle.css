@@ -452,14 +452,6 @@ ul.imgs li{
     font-family: 'Roboto', sans-serif;
 }
 
-.team-photo {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
 .research-areas h3 {
     font-size: 18px;
     font-weight: 600;
