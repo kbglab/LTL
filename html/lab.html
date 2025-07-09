@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연구실 소개 - KBG LAB</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-    <link href="../style/sytle.css" rel="stylesheet" type="text/css"/>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../js/basic.js"></script>    
     <style>
         /* 연구실 소개 페이지 전용 스타일 */
@@ -15,6 +15,7 @@
             margin: 0 auto;
             padding: 40px 20px;
             gap: 40px;
+            align-items: stretch;
         }
 
         /* 왼쪽 사이드 네비게이션 */
@@ -24,6 +25,7 @@
             border-radius: 8px;
             padding: 20px;
             height: fit-content;
+            align-self: flex-start;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -73,6 +75,7 @@
             border-radius: 8px;
             padding: 40px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 0px;
         }
 
         .content-header {
@@ -101,9 +104,11 @@
         }
 
         .lab-image {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
+            max-width: 400px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
@@ -162,28 +167,29 @@
     </style>
 </head>
 <body>
-    <!-- 메인 헤더 -->
+    <!-- 메인 헤더 (기존과 동일) -->
     <header class="header">
-        <div class="header-container">
-            <div class="logo-section">
-                <div class="logo">
-                    <img src="img/lab_logo.PNG" alt="연구실 로고" />
-                </div>
-                <div class="lab-title">KBG’s Language & Technology Lab</div>
+    <div class="header-container">
+        <div class="logo-section">
+            <div class="logo">
+                <img src="../img/lab_logo.PNG" alt="연구실 로고" />
+            </div>
+            <div class="lab-title">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">KBG's Language & Technology Lab</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- 메인 네비게이션 -->
+    <!-- 메인 네비게이션 (기존과 동일) -->
     <nav class="main-nav">
         <div class="nav-container">
-            <div class="nav-item"><a href=html/lab.html>연구실소개</a></div>
-            <div class="nav-item"><a href=html/professor.html>교수소개</a></div>
-            <div class="nav-item"><a href=html/members.html>멤버소개</a></div>
-            <!-- <div class="nav-item">졸업생</div> -->
-            <div class="nav-item"><a href=html/research.html>연구</a></div>
-            <div class="nav-item"><a href=html/publish.html>논문</a></div>
-            <div class="nav-item"><a href=html/gallery.html>갤러리</a></div>
+            <div class="nav-item"><a href="lab.html" class="active">연구실소개</a></div>
+            <div class="nav-item"><a href="professor.html">교수소개</a></div>
+            <div class="nav-item"><a href="members.html">멤버소개</a></div>
+            <div class="nav-item"><a href="research.html">연구</a></div>
+            <div class="nav-item"><a href="publish.html">논문</a></div>
+            <div class="nav-item"><a href="gallery.html">갤러리</a></div>
         </div>
     </nav>
 
@@ -193,63 +199,99 @@
         <div class="side-nav">
             <h3>연구실소개</h3>
             <ul>
-                <li><a href="#" class="active">인사말</a></li>
-                <li><a href="#">연구실 소개</a></li>
-                <li><a href="#">연구 목표</a></li>
-                <li><a href="#">연구실 연혁</a></li>
-                <li><a href="#">시설 안내</a></li>
+                <li><a href="#" onclick="showGreeting()" class="active" id="greeting-tab">인사말</a></li>
+                <li><a href="#" onclick="showMajor()" id="major-tab">전공 세부 소개</a></li>
             </ul>
         </div>
 
         <!-- 메인 컨텐츠 영역 -->
         <div class="main-content">
-            <div class="content-header">
-                <h1>연구실 소개</h1>
-                <p class="subtitle">KBG's Language & Technology Lab</p>
-            </div>
+            <!-- 인사말 내용 -->
+            <div id="greeting-content">
+                <div class="content-header">
+                    <h1>인사말</h1>
+                    <p class="subtitle">KBG's Language & Technology Lab</p>
+                </div>
 
-            <div class="content-body">
-                <img src="../img/main_1.jpeg" alt="연구실 사진" class="lab-image">
-                
-                <div class="text-content">
-                    <h3>환영합니다</h3>
-                    <p>
-                        KBG's Language & Technology Lab은 서강대학교 중국문화학과에서 
-                        언어학과 기술의 융합 연구를 수행하는 연구실입니다. 
-                        우리 연구실은 현대 중국어의 언어학적 특성과 디지털 기술을 
-                        접목한 다양한 연구 프로젝트를 진행하고 있습니다.
-                    </p>
+                <div class="content-body">
+                    <img src="../img/lab_logo.PNG" alt="연구실 로고" class="lab-image">
                     
-                    <p>
-                        특히 자연어처리, 언어 교육 기술, 디지털 인문학 분야에서 
-                        혁신적인 연구 성과를 창출하여 학문 발전에 기여하고자 합니다.
-                        학생들과 함께 미래 지향적인 연구를 통해 언어와 기술의 
-                        새로운 가능성을 탐구하고 있습니다.
-                    </p>
-
-                    <div class="highlight-box">
-                        <strong>연구 비전:</strong> 언어학과 첨단 기술의 융합을 통해 
-                        인문학의 새로운 지평을 열어가는 것을 목표로 합니다.
+                    <div class="text-content">
+                        <h3>환영합니다</h3>
+                        <p>
+                            KBG's Language & Technology Lab은 서강대학교 중국문화학과에서 
+                            언어학과 기술의 융합 연구를 수행하는 연구실입니다. 
+                            우리 연구실은 현대 중국어의 언어학적 특성과 디지털 기술을 
+                            접목한 다양한 연구 프로젝트를 진행하고 있습니다.
+                        </p>
+                        
+                        <p>
+                            더 구체적인 내용 추가.
+                        </p>
                     </div>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>주요 연구 분야</h3>
+                    <p>
+                        우리 연구실에서는 다음과 같은 분야에서 활발한 연구 활동을 전개하고 있습니다:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>주요 연구 분야1</li>
+                        <li>주요 연구 분야2</li>
+                        <li>주요 연구 분야3</li>
+                        <li>주요 연구 분야4</li>
+                        <li>주요 연구 분야5</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="text-content" style="margin-top: 40px;">
-                <h3>주요 연구 분야</h3>
-                <p>
-                    우리 연구실에서는 다음과 같은 분야에서 활발한 연구 활동을 전개하고 있습니다:
-                </p>
-                <ul style="margin-left: 20px; line-height: 1.8;">
-                    <li>중국어 자연어처리 및 언어 모델링</li>
-                    <li>디지털 언어 교육 콘텐츠 개발</li>
-                    <li>코퍼스 언어학 및 텍스트 마이닝</li>
-                    <li>다국어 정보처리 시스템</li>
-                    <li>언어 학습 지원 AI 기술</li>
-                </ul>
+            <!-- 전공 세부 소개 내용 -->
+            <div id="major-content" style="display: none;">
+                <div class="content-header">
+                    <h1>전공 세부 소개</h1>
+                </div>
+
+                <div class="text-content">
+                    <h3>세부 전공 이름1</h3>
+                    <p>
+                        전공 한줄 소개.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>ex.중국어 통사구조 분석</li>
+                        <li>ex.중국어 방언학 연구</li>
+                    </ul>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>세부 전공 이름2</h3>
+                    <p>
+                        전공 한줄 소개.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                    </ul>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>세부 전공 이름2</h3>
+                    <p>
+                        전공 한줄 소개.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- 푸터 (기존과 동일) -->
     <div class="footer-container">
         <div class="footer">
             <div class="info foot_text">
@@ -267,9 +309,25 @@
                 <a onclick="newWindowPop.open('http://www.sogang.ac.kr/notice/private_rule/privacy05.html','privacy',808,650);" class="button0">개인정보처리방침</a>
             </div>
             <div class="school-logo">
-                <img src="img/univ_log.png" alt="학교 로고" />
+                <img src="../img/univ_log.png" alt="학교 로고" />
             </div>
         </div>
     </div>
+
+    <script>
+        function showGreeting() {
+            document.getElementById('greeting-content').style.display = 'block';
+            document.getElementById('major-content').style.display = 'none';
+            document.getElementById('greeting-tab').classList.add('active');
+            document.getElementById('major-tab').classList.remove('active');
+        }
+
+        function showMajor() {
+            document.getElementById('greeting-content').style.display = 'none';
+            document.getElementById('major-content').style.display = 'block';
+            document.getElementById('greeting-tab').classList.remove('active');
+            document.getElementById('major-tab').classList.add('active');
+        }
+    </script>
 </body>
 </html>
