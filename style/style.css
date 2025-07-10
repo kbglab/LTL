@@ -89,7 +89,8 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
     position:absolute;
-    left: 20%;
+    left: 25%;
+    text-align: center;
  
 }
 
@@ -106,14 +107,14 @@ body {
     padding: 0 20px;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 90px;
 }
 
 .nav-item {
     color: #ffffff;
     text-decoration: none;
     padding: 20px 0;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
@@ -430,17 +431,18 @@ ul.imgs li{
 .content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 60px;
+    gap: 30px;
     align-items: start;
 }
 
 /* About Us 섹션 */
 .about-section {
     background-color: #ffffff;
+    margin-left: 60px;
 }
 
 .about-section h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     color: #333;
     margin-bottom: 30px;
@@ -448,7 +450,7 @@ ul.imgs li{
 }
 
 .research-areas h3 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     color: #d32f2f;
     margin-bottom: 20px;
@@ -467,7 +469,7 @@ ul.imgs li{
 
 .research-list li {
     color: #666;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     padding-left: 20px;
     position: relative;
 }
@@ -485,7 +487,7 @@ ul.imgs li{
     max-width: 350px;
     background-color: #d32f2f;
     color: white;
-    padding: 40px 30px;
+    padding: 15px 30px;
     border-radius: 8px;
     height: fit-content;
 }
