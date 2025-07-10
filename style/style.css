@@ -89,9 +89,22 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
     position:absolute;
-    left: 25%;
+    left: 36%;
     text-align: center;
  
+}
+
+.professor-name-ko {
+    font-size: 56px;
+    font-weight: 1000;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.professor-name-en {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 /* 메인 네비게이션 */
@@ -107,7 +120,7 @@ body {
     padding: 0 20px;
     display: flex;
     justify-content: center;
-    gap: 90px;
+    gap: 120px;
 }
 
 .nav-item {
@@ -465,6 +478,7 @@ ul.imgs li{
 .research-list {
     list-style: none;
     padding: 0;
+    margin-left: 40px;
 }
 
 .research-list li {
