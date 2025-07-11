@@ -40,71 +40,89 @@ body {
 }
 
 /* 메인 헤더 */
+/* 수정된 메인 헤더 */
 .header {
     background-color: #ffffff;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px 0 40px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .header-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
-    align-items: center;
-}
-
-.logo-section {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    position: relative;
-}
-
-.logo {
-    height: 100%;
-    width: 15%;
-    padding: 10px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    float: left;
-    position:absolute;
-
+    align-items: center;
 }
 
-.logo img {
-    height: 160px;
-    width: 100%;
-    object-fit: contain;
-}
-
-.lab-title {
-    font-size: 56px;
-    font-weight: 1000;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    position:absolute;
-    left: 36%;
+.title-content {
     text-align: center;
- 
 }
 
 .professor-name-ko {
-    font-size: 56px;
-    font-weight: 1000;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: 900;
+    color: #2c3e50;
+    margin-bottom: -2px;
+    letter-spacing: -2px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.chinese-name {
+    font-size: 24px;
+    color: #95a5a6;
+    margin-bottom: 0px;
+    font-weight: 400;
 }
 
 .professor-name-en {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 28px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.professor-name-en::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background-color: #f39c12;
+}
+
+/* 반응형 디자인 추가 */
+@media (max-width: 768px) {
+    .professor-name-ko {
+        font-size: 48px;
+    }
+    
+    .professor-name-en {
+        font-size: 24px;
+    }
+    
+    .professor-name-en::after {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .professor-name-ko {
+        font-size: 36px;
+    }
+    
+    .professor-name-en {
+        font-size: 20px;
+    }
+    
+    .professor-name-en::after {
+        width: 120px;
+    }
 }
 
 /* 메인 네비게이션 */
