@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구실 소개 - KBG LAB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/basic.js"></script>    
+    <style>
+        /* 연구실 소개 페이지 전용 스타일 */
+        .lab-content {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        /* 왼쪽 사이드 네비게이션 */
+        .side-nav {
+            width: 250px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+            align-self: flex-start;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .side-nav h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #C8102E;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-nav li {
+            margin-bottom: 10px;
+        }
+
+        .side-nav a {
+            display: block;
+            padding: 12px 15px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .side-nav a:hover {
+            background: #c8102f4f;
+            color: white;
+        }
+
+        .side-nav a.active {
+            background: #C8102E;
+            color: white;
+        }
+
+        /* 메인 컨텐츠 영역 */
+        .main-content {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 0px;
+        }
+
+        .content-header {
+            margin-bottom: 30px;
+        }
+
+        .content-header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+        }
+
+        .content-header .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 사진과 텍스트 레이아웃 */
+        .content-body {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .lab-image {
+            max-width: 200px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .text-content {
+            flex: 1;
+            line-height: 1.8;
+            color: #555;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .text-content h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .lab-content {
+                flex-direction: column;
+                padding: 20px 10px;
+            }
+
+            .side-nav {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content-body {
+                flex-direction: column;
+            }
+
+            .lab-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 메인 헤더 (기존과 동일) -->
+    <header class="header">
+        <div class="header-container">
+            <div class="title-content">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <div class="professor-name-ko">강병규 교수님</div>
+                    <div class="chinese-name">姜柄圭</div>
+                    <div class="professor-name-en">Prof. ByeongKwu Kang</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 네비게이션 (기존과 동일) -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item"><a href="lab.html" class="active">About Us</a></div>
+            <div class="nav-item"><a href="professor.html">Professor</a></div>
+            <div class="nav-item"><a href="members.html">Members</a></div>
+            <div class="nav-item"><a href="publish.html">Publications</a></div>
+            <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+        </div>
+    </nav>
+
+    <!-- 연구실 소개 컨텐츠 -->
+    <div class="lab-content">
+        <!-- 왼쪽 사이드 네비게이션 -->
+        <div class="side-nav">
+            <h3>연구실소개</h3>
+            <ul>
+                <li><a href="#" onclick="showGreeting()" class="active" id="greeting-tab">인사말</a></li>
+                <li><a href="#" onclick="showMajor()" id="major-tab">전공 세부 소개</a></li>
+            </ul>
+        </div>
+
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="main-content">
+            <!-- 인사말 내용 -->
+            <div id="greeting-content">
+                <div class="content-header">
+                    <h1>인사말</h1>
+                    <p class="subtitle">KBG’s Linguistics & NLP</p>
+                </div>
+
+                <div class="content-body">
+                    <img src="../img/lab_logo.PNG" alt="연구실 로고" class="lab-image">
+                    
+                    <div class="text-content">
+                        <h3>환영합니다</h3>
+                        <p>
+                            KBG’s Linguistics & NLP는 서강대학교 중국문화학과에서 
+                            언어학과 기술의 융합 연구를 수행하는 연구실입니다. 
+                            우리 연구실은 현대 중국어의 언어학적 특성과 디지털 기술을 
+                            접목한 다양한 연구 프로젝트를 진행하고 있습니다.
+                        </p>
+                        
+                        <p>
+                            더 구체적인 내용 추가.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>주요 연구 분야</h3>
+                    <p>
+                        우리 연구실에서는 다음과 같은 분야에서 활발한 연구 활동을 전개하고 있습니다.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>주요 연구 분야1</li>
+                        <li>주요 연구 분야2</li>
+                        <li>주요 연구 분야3</li>
+                        <li>주요 연구 분야4</li>
+                        <li>주요 연구 분야5</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 전공 세부 소개 내용 -->
+            <div id="major-content" style="display: none;">
+                <div class="content-header">
+                    <h1>전공 세부 소개</h1>
+                </div>
+
+                <div class="text-content">
+                    <h3>세부 전공 이름1</h3>
+                    <p>
+                        전공 한줄 소개.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>ex.중국어 통사구조 분석</li>
+                        <li>ex.중국어 방언학 연구</li>
+                    </ul>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>세부 전공 이름2</h3>
+                    <p>
+                        전공 한줄 소개.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                    </ul>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>세부 전공 이름2</h3>
+                    <p>
+                        전공 한줄 소개.
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                        <li>구체적 전공or연구 방향 이름</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 (기존과 동일) -->
+    <div class="footer-container">
+        <div class="footer">
+            <div class="info foot_text">
+                <div class="address">
+                    <span>04107</span>
+                    <span>서울특별시 마포구 백범로</span>
+                    <span>35</span>
+                    <span>(신수동) 서강대학교 정하상관 11층</span>
+                    <strong style="margin-left:8px;">TEL</strong>
+                    <span>: 010-3837-2338</span>
+                </div>
+                <div class="copyright">Created and managed by KIMEUNHA</div>
+            </div>
+            <div class="foot_btn foot_text">
+                <a onclick="newWindowPop.open('http://www.sogang.ac.kr/notice/private_rule/privacy05.html','privacy',808,650);" class="button0">개인정보처리방침</a>
+            </div>
+            <div class="school-logo">
+                <img src="../img/univ_log.png" alt="학교 로고" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showGreeting() {
+            document.getElementById('greeting-content').style.display = 'block';
+            document.getElementById('major-content').style.display = 'none';
+            document.getElementById('greeting-tab').classList.add('active');
+            document.getElementById('major-tab').classList.remove('active');
+        }
+
+        function showMajor() {
+            document.getElementById('greeting-content').style.display = 'none';
+            document.getElementById('major-content').style.display = 'block';
+            document.getElementById('greeting-tab').classList.remove('active');
+            document.getElementById('major-tab').classList.add('active');
+        }
+    </script>
+</body>
+</html>

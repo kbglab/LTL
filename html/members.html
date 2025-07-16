@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멤버 소개 - KBG LAB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/basic.js"></script>    
+    <style>
+        /* 멤버 소개 페이지 전용 스타일 */
+        .lab-content {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        /* 왼쪽 사이드 네비게이션 */
+        .side-nav {
+            width: 250px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+            align-self: flex-start;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .side-nav h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #C8102E;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-nav li {
+            margin-bottom: 10px;
+        }
+
+        .side-nav a {
+            display: block;
+            padding: 12px 15px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .side-nav a:hover {
+            background: #c8102f4f;
+            color: white;
+        }
+
+        .side-nav a.active {
+            background: #C8102E;
+            color: white;
+        }
+
+        /* 메인 컨텐츠 영역 */
+        .main-content {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 0px;
+        }
+
+        .content-header {
+            margin-bottom: 30px;
+        }
+
+        .content-header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+        }
+
+        .content-header .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 사진과 텍스트 레이아웃 */
+        .content-body {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .text-content {
+            flex: 1;
+            line-height: 1.8;
+            color: #555;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .text-content h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        /* 멤버 카드 스타일 */
+        .member-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border-left: 4px solid #f39c12;
+        }
+
+        .member-info {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .member-details {
+            flex: 1;
+        }
+
+        .member-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .member-position {
+            font-size: 14px;
+            font-weight: 600;
+            color: #C8102E;
+            margin-bottom: 10px;
+        }
+
+        .member-research {
+            font-size: 15px;
+            color: #666;
+            line-height: 2.2;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .lab-content {
+                flex-direction: column;
+                padding: 20px 10px;
+            }
+
+            .side-nav {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content-body {
+                flex-direction: column;
+            }
+
+            .lab-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .member-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .member-photo {
+                width: 100px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 메인 헤더 (기존과 동일) -->
+    <header class="header">
+        <div class="header-container">
+            <div class="title-content">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <div class="professor-name-ko">강병규 교수님</div>
+                    <div class="chinese-name">姜柄圭</div>
+                    <div class="professor-name-en">Prof. ByeongKwu Kang</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 네비게이션 (기존과 동일) -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item"><a href="lab.html">About Us</a></div>
+            <div class="nav-item"><a href="professor.html">Professor</a></div>
+            <div class="nav-item"><a href="members.html" class="active">Members</a></div>
+            <div class="nav-item"><a href="publish.html">Publications</a></div>
+            <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+        </div>
+    </nav>
+
+    <!-- 멤버 소개 컨텐츠 -->
+    <div class="lab-content">
+        <!-- 왼쪽 사이드 네비게이션 -->
+        <div class="side-nav">
+            <h3>멤버소개</h3>
+            <ul>
+                <li><a href="#" onclick="showCurrentStudents()" class="active" id="current-tab">재학생</a></li>
+                <li><a href="#" onclick="showGraduates()" id="graduate-tab">졸업생</a></li>
+            </ul>
+        </div>
+
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="main-content">
+            <!-- 재학생 내용 -->
+            <div id="current-content">
+                <div class="content-header">
+                    <h1>재학생</h1>
+                    <p class="subtitle">Current Students</p>
+                </div>
+
+                <div class="content-body">                
+                    <div class="text-content">
+                        <p>
+                            (소개문구?)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>박사과정</h3>
+                    
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/LHZ.jpg" alt="LI HAIZHEN" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">이해진 (LI HAIZHEN)</div>
+                                <div class="member-position">(2016~)</div>
+                                <div class="member-research">
+                                    <strong>연구분야:</strong> 현대중국어 문법<br>
+                                    <strong>이메일:</strong> lihaizhen7979@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>석·박사통합과정</h3>
+                    
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/KEH.jpg" alt="김은하" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">김은하 (KIM EUNHA)</div>
+                                <div class="member-position">(2023~)</div>
+                                <div class="member-research">
+                                    <strong>연구분야:</strong> 중국어 응용 언어학(코퍼스 언어학, 자연어처리)<br>
+                                    <strong>이메일:</strong> ehk622@sogang.ac.kr
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>석사과정</h3>
+                    
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/CHS.jpg" alt="조현서" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">조현서 (CHO HYUNSEO)</div>
+                                <div class="member-position">(2022~)</div>
+                                <div class="member-research">
+                                    <strong>연구분야:</strong> 중국어 교육<br>
+                                    <strong>이메일:</strong> hsxx1103@naver.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/student4.jpg" alt="하유빈" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">하유빈 (HA YUBEEN)</div>
+                                <div class="member-position">(2024~)</div>
+                                <div class="member-research">
+                                    <strong>연구분야:</strong> 내용 기입<br>
+                                    <strong>이메일:</strong> s@sogang.ac.kr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/student4.jpg" alt="황베리" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">황베리 (HUANG BEILI)</div>
+                                <div class="member-position">(2025~)</div>
+                                <div class="member-research">
+                                    <strong>연구분야:</strong> 내용 기입<br>
+                                    <strong>이메일:</strong> s@sogang.ac.kr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 졸업생 내용 -->
+            <div id="graduate-content" style="display: none;">
+                <div class="content-header">
+                    <h1>졸업생</h1>
+                    <p class="subtitle">Alumni</p>
+                </div>
+
+                <div class="content-body">                 
+                    <div class="text-content">
+                        <p>
+                            (소개문구?)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>박사 졸업생</h3>
+                    
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/alumni3.jpg" alt="박정희" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">박정희 ()</div>
+                                <div class="member-position">2025년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『ICL 기반 생성형 AI 소설 번역 프롬프트 템플릿 연구』<br>
+                                    <strong>현재소속:</strong> ㅇㅇㅇㅇ<br>
+                                    <strong>이메일:</strong> s@sogang.ac.kr<br>
+                                    <strong>연구분야:</strong>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/pic_man.png" alt="최승혁" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">최승혁 (Choi SeungHyuk)</div>
+                                <div class="member-position">2024년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『법률 도메인 특화 기계번역 모델 연구: 중국 민법전을 실례로』<br>
+                                    <strong>현재소속:</strong> 중앙대학교 국제대학원<br>
+                                    <strong>이메일:</strong> choi00joy@hanmail.net<br>
+                                    <strong>연구분야:</strong> 중국어 응용 언어학(AI 번역, 기계번역)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/alumni1.jpg" alt="이명월" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">이명월 (LI MINGYUE)</div>
+                                <div class="member-position">2023년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『构式语法视角下的汉语数量词构式研究』<br>
+                                    <strong>현재소속:</strong> ㅇㅇㅇㅇ<br>
+                                    <strong>이메일:</strong> s@sogang.ac.kr<br>
+                                    <strong>연구분야:</strong> ㅇㅇㅇㅇ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-content" style="margin-top: 40px;">
+                    <h3>석사 졸업생</h3>
+                    
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/alumni6.jpg" alt="LENG XINYI" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">LENG XINYI</div>
+                                <div class="member-position">2023년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『面向韩国语教师的韩国语言学概论』<br>
+                                    <strong>현재소속:</strong> ㅇㅇㅇㅇ<br>
+                                    <strong>이메일:</strong> s@sogang.ac.kr<br>
+                                    <strong>연구분야:</strong> ㅇㅇㅇㅇ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/KSM.jpeg" alt="강수민" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">강수민 (Kang Sumin)</div>
+                                <div class="member-position">2023년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『자연어처리를 위한 중국어 복합방향보어 구문의 데이터화 연구』<br>
+                                    <strong>현재소속:</strong> 北京大学 中国语言文学系 博士生<br>
+                                    <strong>이메일:</strong> kksm9801@gmail.com<br>
+                                    <strong>연구분야:</strong> 현대 중국어 어법, 중국어 응용 언어학(코퍼스 언어학, 자연어처리, Chinese information processing)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/KDY.jpeg" alt="김다예" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">김다예 (KIM DAYE)</div>
+                                <div class="member-position">2016년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『중국어 초점 ‘连…都’ 구문의 정보구조와 억양 연구』<br>
+                                    <strong>현재소속:</strong> 홍익대학교 국제언어교육원<br>
+                                    <strong>이메일:</strong> kdy726@naver.com<br>
+                                    <strong>연구분야:</strong> 중국어 응용 언어학
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-section">
+                        <div class="member-info">
+                            <img src="../img/LHZ.jpg" alt="이해진" class="member-photo">
+                            <div class="member-details">
+                                <div class="member-name">이해진 (LI HAIZHEN)</div>
+                                <div class="member-position">2016년 졸업</div>
+                                <div class="member-research">
+                                    <strong>논문제목:</strong> 『중국어 관계절의 어법적 특징 연구』<br>
+                                    <strong>현재소속:</strong> 부천대학교 영상&게임콘텐츠과<br>
+                                    <strong>이메일:</strong> lihaizhen7979@gmail.com<br>
+                                    <strong>연구분야:</strong> 현대중국어 문법
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 (기존과 동일) -->
+    <div class="footer-container">
+        <div class="footer">
+            <div class="info foot_text">
+                <div class="address">
+                    <span>04107</span>
+                    <span>서울특별시 마포구 백범로</span>
+                    <span>35</span>
+                    <span>(신수동) 서강대학교 정하상관 11층</span>
+                    <strong style="margin-left:8px;">TEL</strong>
+                    <span>: 010-3837-2338</span>
+                </div>
+                <div class="copyright">Created and managed by KIMEUNHA</div>
+            </div>
+            <div class="foot_btn foot_text">
+                <a onclick="newWindowPop.open('http://www.sogang.ac.kr/notice/private_rule/privacy05.html','privacy',808,650);" class="button0">개인정보처리방침</a>
+            </div>
+            <div class="school-logo">
+                <img src="../img/univ_log.png" alt="학교 로고" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCurrentStudents() {
+            document.getElementById('current-content').style.display = 'block';
+            document.getElementById('graduate-content').style.display = 'none';
+            document.getElementById('current-tab').classList.add('active');
+            document.getElementById('graduate-tab').classList.remove('active');
+        }
+
+        function showGraduates() {
+            document.getElementById('current-content').style.display = 'none';
+            document.getElementById('graduate-content').style.display = 'block';
+            document.getElementById('current-tab').classList.remove('active');
+            document.getElementById('graduate-tab').classList.add('active');
+        }
+    </script>
+</body>
+</html>
