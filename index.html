@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBG LAB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/basic.js"></script>    
+    
+ 
+</head>
+<body>
+
+    <!-- 메인 헤더 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="title-content">
+                <div class="professor-name-ko">강병규 교수님</div>
+                <div class="chinese-name">姜柄圭</div>
+                <div class="professor-name-en">Prof. ByeongKwu Kang</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 네비게이션 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item"><a href=html/lab.html>About Us</a></div>
+            <div class="nav-item"><a href=html/professor.html>Professor</a></div>
+            <div class="nav-item"><a href=html/members.html>Members</a></div>
+            <div class="nav-item"><a href=html/publish.html>Publications</a></div>
+            <div class="nav-item"><a href=html/gallery.html>Gallery</a></div>
+        </div>
+    </nav>
+    
+    <!-- 이미지 슬라이드 -->
+    <section class="hero-section">
+        <div class="slider">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+            <ul id="imgholder" class="imgs">
+                <li><img src="img/main_4.jpeg" alt="연구실 메인 이미지" class="hero-image"></li>
+                <li><img src="img/main_2.jpeg" alt="연구실 메인 이미지" class="hero-image"></li>
+                <li><img src="img/main_3.jpeg" alt="연구실 메인 이미지" class="hero-image"></li>
+                <li><img src="img/main_1.jpeg" alt="연구실 메인 이미지" class="hero-image"></li>
+                <li><img src="img/main_5.jpeg" alt="연구실 메인 이미지" class="hero-image"></li>
+            </ul>
+            <div class="hero-overlay"></div>
+
+
+            <div class="bullets">
+                <label for="slide1">&nbsp;</label>
+                <label for="slide2">&nbsp;</label>
+                <label for="slide3">&nbsp;</label>
+                <label for="slide4">&nbsp;</label>
+                <label for="slide5">&nbsp;</label>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 메인 컨텐츠 -->
+    <main class="content-section">
+        <h1 class="lab-title-main">Chinese Linguistics & NLP</h1>
+        
+        <div class="content-grid">
+            <!-- Research Overview 섹션 -->
+            <div class="about-section">
+                <h2>Research Overview</h2>                
+                <div class="research-areas">
+                    <h3>연구분야</h3>
+                    <p class="research-description">
+                        중국어 응용 언어학(Chinese Applied Linguistics)</br>
+                    </p>
+                    <ul class="research-list">
+                        <li>현대중국어문법(Contemporary Chinese Grammar)</li>
+                        <li>코퍼스언어학(Corpus Linguistics)</li>
+                        <li>자연어처리-기계번역(NLP and Machine Translation)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 연구실 정보 -->
+            <div class="lab-info">
+                <h3>Lab Information</h3>
+                <div class="info-item">
+                    <span class="label">소속</span>
+                    <span class="value">서강대학교 중국문화학과</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">장소</span>
+                    <span class="value">정하상관(J) 1110호</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">연락처</span>
+                    <span class="value">
+                        ehk622@sogang.ac.kr<br>
+                        010-3837-2338</span>
+                </div>
+            </div>
+        </div>
+ 
+    </main>
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="info foot_text">
+                <div class="address">
+                    <span>04107</span>
+                    <span>서울특별시 마포구 백범로</span>
+                    <span>35</span>
+                    <span>(신수동) 서강대학교 정하상관 11층</span>
+                    <strong style="margin-left:8px;">TEL</strong>
+                    <span>: 010-3837-2338</span>
+                </div>
+                <div class="copyright">Created and managed by KIMEUNHA</div>
+            </div>
+            <div class="foot_btn foot_text">
+                <a onclick="newWindowPop.open('http://www.sogang.ac.kr/notice/private_rule/privacy05.html','privacy',808,650);" class="button0">개인정보처리방침</a>
+            </div>
+            <div class="school-logo">
+                <img src="img/univ_log.png" alt="학교 로고" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
