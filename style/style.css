@@ -337,7 +337,7 @@ body {
 /* 메인 이미지 섹션 */
 .hero-section {
     width: 100%;
-    height: 500px;
+    height: 630px;
     overflow: hidden;
     position: relative;
 }
@@ -360,10 +360,10 @@ body {
 
 .slider{
     width: 100%;
-    height: 500px;
+    height: 630px;
     position:relative;
     margin : 0 auto;
-    animation: slide 10s infinite; /* 10초마다 반복 */
+    animation: slide 15s infinite;
 }
 
 .slider input[type=radio]{
@@ -412,12 +412,6 @@ ul.imgs li{
 .slider input[type=radio]:nth-child(3):checked ~ .bullets > label:nth-child(3) {
     background-color: #fff;
 }
-.slider input[type=radio]:nth-child(4):checked ~ .bullets > label:nth-child(4) {
-    background-color: #fff;
-}
-.slider input[type=radio]:nth-child(5):checked ~ .bullets > label:nth-child(5) {
-    background-color: #fff;
-}
 
 .slider input[type=radio]:nth-child(1):checked ~ ul.imgs > li:nth-child(1) {
     opacity: 1;
@@ -434,16 +428,7 @@ ul.imgs li{
     transition: 1s;
     z-index: 1;
 }
-.slider input[type=radio]:nth-child(4):checked ~ ul.imgs > li:nth-child(4){
-    opacity: 1;
-    transition: 1s;
-    z-index: 1;
-}
-.slider input[type=radio]:nth-child(5):checked ~ ul.imgs > li:nth-child(5){
-    opacity: 1;
-    transition: 1s;
-    z-index: 1;
-}
+
 /* 컨텐츠 섹션 */
 .content-section {
     max-width: 1400px;

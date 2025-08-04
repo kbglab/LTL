@@ -46,7 +46,7 @@
             console.log('✅ basic.js loaded and running');
 
             let current = 1;
-            const totalSlides = 5;
+            const totalSlides = 3;
         
             setInterval(() => {
                 const currentRadio = document.getElementById('slide' + current);
@@ -56,5 +56,5 @@
         
                 const nextRadio = document.getElementById('slide' + current);
                 if (nextRadio) nextRadio.checked = true;
-            }, 4000);
+            }, 7000);
         });
