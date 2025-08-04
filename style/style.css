@@ -481,7 +481,8 @@ ul.imgs li{
 .research-list {
     list-style: none;
     padding: 0;
-    margin-left: 20px;
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 .research-list li {
